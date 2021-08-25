@@ -28,7 +28,7 @@
 |编程语言|programming language|
 |运行时（runtime）|runtime|
 |你好世界（Hello World）|Hello World|
-|主机（host）|host|
+|宿主（host）|host|
 |代码空间|Codespaces|
 |计划中的API|Proposed API|
 |作用点|Contribution Points|
