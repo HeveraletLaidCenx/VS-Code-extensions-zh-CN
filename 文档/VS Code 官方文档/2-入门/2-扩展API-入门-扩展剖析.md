@@ -1,4 +1,4 @@
-# Extension Anatomy
+# 扩展剖析
 
 [原文链接，戳我前往](https://code.visualstudio.com/api/get-started/extension-anatomy)
 
@@ -16,6 +16,7 @@
 |身份（ID）|Identity|
 |函数|function|
 |调用|invoke|
+|功能|capabilities|
 |文件结构|file structure|
 |编译|compile|
 |node 模块|node_modules|
