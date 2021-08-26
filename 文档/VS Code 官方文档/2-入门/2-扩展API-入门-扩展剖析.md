@@ -24,8 +24,9 @@
 |域|field|
 |唯一识别|uniquely identify|
 |入口|entry point|
-|启用|activate|
+|激活|activate|
 |停用|deactivate|
+|执行|execute|
 |显式的|explicit|
 |智能感知提示|IntelliSense|
 |导入|import|
@@ -47,9 +48,9 @@
 
 `Hello World` 扩展做了3件事儿：
 
-* 注册了 [`onCommand`](https://code.visualstudio.com/api/references/activation-events#onCommand) [**激活事件**](https://code.visualstudio.com/api/references/activation-events)：`onCommand:helloworld.helloWorld`，因此扩展会在用户运行 `Hello World` 命令时被激活。
-* 用 [`contributes.commands`](https://code.visualstudio.com/api/references/contribution-points#contributes.commands) [**作用点**](https://code.visualstudio.com/api/references/contribution-points) 来让 `Hello World` 命令在命令面板中可用，并且将它绑定到一个命令 ID `helloworld.helloWorld` 。
-* 用 [`commands.registerCommand`](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand) [**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 来将一个函数绑定到注册了的命令 ID `helloworld.helloWorld` 上。
+* 注册了 [onCommand](https://code.visualstudio.com/api/references/activation-events#onCommand) [**激活事件**](https://code.visualstudio.com/api/references/activation-events)：`onCommand:helloworld.helloWorld`，因此扩展会在用户运行 `Hello World` 命令时被激活。
+* 用 [contributes.commands](https://code.visualstudio.com/api/references/contribution-points#contributes.commands) [**作用点**](https://code.visualstudio.com/api/references/contribution-points) 来让 `Hello World` 命令在命令面板中可用，并且将它绑定到一个命令 ID `helloworld.helloWorld` 。
+* 用 [commands.registerCommand](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand) [**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 来将一个函数绑定到注册了的命令 ID `helloworld.helloWorld` 上。
 
 理解这仨概念，在 **VS Code** 扩展编写中至关重要：
 

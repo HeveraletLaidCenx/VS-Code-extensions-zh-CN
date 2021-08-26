@@ -10,13 +10,14 @@
 
 |中文（常用英文表述）|英文|
 |----|----|
+|命令|command|
 |Node包管理工具（npm）|Node package manager|
 |基于框架搭建、脚手架|scaffold|
 |【*非常规释义】建立|contribute|
 |清单|manifest|
 |静态|static|
 |声明|declarations|
-|按键绑定|keybindings|
+|键位绑定|keybindings|
 |断点|breakpoints|
 |行号槽、装订线|gutter|
 |命中断点|hit the breakpoint|
@@ -117,7 +118,7 @@ code ./helloworld
 完成了新手任务之后，不如来试试挑战进阶任务？比如下边这些：
 
 * 给 **Hello World** 命令在命令面板指定一个新名称。
-* [建立](https://code.visualstudio.com/api/references/contribution-points) 另一个命令，实现在通知消息中显示当前时间的功能。 **作用点** 是你在 `package.json` [扩展清单](https://code.visualstudio.com/api/references/extension-manifest) 中为了扩展 **VS Code** 而做的静态声明，比如给你的扩展添加命令、菜单或按键绑定。
+* [建立](https://code.visualstudio.com/api/references/contribution-points) 另一个命令，实现在通知消息中显示当前时间的功能。 **作用点** 是你在 `package.json` [扩展清单](https://code.visualstudio.com/api/references/extension-manifest) 中为了扩展 **VS Code** 而做的静态声明，比如给你的扩展添加命令、菜单 或 键位绑定。
 * 把 `vscode.window.showInformationMessage` 替换为另一个 [**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 调用来实现显示一条警告消息。
 
 ## Debug 扩展

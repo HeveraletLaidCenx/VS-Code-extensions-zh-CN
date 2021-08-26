@@ -22,6 +22,7 @@
 |进度|progress|
 |长时间运行的|long-running|
 |《黑客帝国》【一部著名电影】|The Matrix|
+|工作区|workspace|
 |将 A 移植到 B|port A to B|
 |声明式的|declarative|
 |括号匹配|bracket matching|
@@ -71,6 +72,8 @@
 
 ------
 
+## 概述
+
 **Visual Studio Code** 为扩展 扩展的功能 提供了很多方式。有时候可能很难找到达到设计功能所需要使用的合适的 [**作用点**](https://code.visualstudio.com/api/references/contribution-points) 和 [**VS Code 扩展API**](https://code.visualstudio.com/api/references/vscode-api) 。这里我们把扩展的功能分成了几类，他们分别描述：
 
 * 你的扩展可以使用的一些功能
@@ -85,7 +88,7 @@
 
 比如包括：
 
-* 注册 命令、配置、按键绑定，或者是上下文菜单中的项目。
+* 注册 命令、配置、键位绑定，或者是上下文菜单中的项目。
 * 存储工作区或者全局数据。
 * 显示通知消息。
 * 使用 快速选取 来收集用户的输入。
@@ -94,7 +97,7 @@
 
 ## 主题
 
-[主题](https://code.visualstudio.com/api/extension-capabilities/theming) 控制 **VS Code** 的外观，包括编辑器中的源代码和整体 **VS Code** UI 的配色。如果你曾想通过把 **VS Code** 的界面变成不同明暗的绿色，让你看上去像在编写《黑客帝国》风格的代码，又或者是想创造一个极致简约的灰度配色工作空间，那么主题就是你在找的东西。
+[主题](https://code.visualstudio.com/api/extension-capabilities/theming) 控制 **VS Code** 的外观，包括编辑器中的源代码和整体 **VS Code** UI 的配色。如果你曾想通过把 **VS Code** 的界面变成不同明暗的绿色，让你看上去像在编写《黑客帝国》风格的代码，又或者是想创造一个极致简约的灰度配色工区，那么主题就是你在找的东西。
 
 一些 **扩展的灵感**
 
@@ -119,7 +122,7 @@
 
 ## 编程型语言功能
 
-[编程型语言功能](https://code.visualstudio.com/api/language-extensions/overview#programmatic-language-features) 添加了丰富的编程语言支持，比如 鼠标悬停提示、转到定义、诊断错误、智能感知提示 和 CodeLens 。这些语言功能通过 [`vscode.languages.*`](https://code.visualstudio.com/api/references/vscode-api#languages) API 暴露。扩展可以直接使用这些 API，也可以编写一个语言服务器并使用 [**VS Code 语言服务器库**](https://github.com/microsoft/vscode-languageserver-node) 将其适配到 **VS Code** 。
+[编程型语言功能](https://code.visualstudio.com/api/language-extensions/overview#programmatic-language-features) 添加了丰富的编程语言支持，比如 鼠标悬停提示、转到定义、诊断错误、智能感知提示 和 CodeLens 。这些语言功能通过 [vscode.languages.*](https://code.visualstudio.com/api/references/vscode-api#languages) API 暴露。扩展可以直接使用这些 API，也可以编写一个语言服务器并使用 [**VS Code 语言服务器库**](https://github.com/microsoft/vscode-languageserver-node) 将其适配到 **VS Code** 。
 
 虽然我们提供了一个包含 [语言功能](https://code.visualstudio.com/api/language-extensions/programmatic-language-features) 和它们的预期用法，但是这并不限制你创造性地使用这些API。比如，CodeLens 和 鼠标悬停提示 就是个内嵌显示额外信息的好方法。而 诊断错误 可以被用来高亮拼写或代码风格的错误。
 
@@ -146,7 +149,7 @@
 
 ## Debug
 
-你可以通过编写 [调试器扩展](https://code.visualstudio.com/api/extension-guides/debugger-extension) ，将 **VS Code** 的 Debug UI 连接到某个特定的 调试器 或 runtime ，来利用 **VS Code** 的 [Debug](https://code.visualstudio.com/docs/editor/debugging) 功能。
+你可以通过编写 [调试器扩展](https://code.visualstudio.com/api/extension-guides/debugger-extension) ，将 **VS Code** 的 Debug UI 连接到某个特定的 调试器 或 runtime ，来使用 **VS Code** 的 [Debug](https://code.visualstudio.com/docs/editor/debugging) 功能。
 
 一些 **扩展的灵感**
 
