@@ -24,6 +24,9 @@
 |组件|components|
 |视图|views|
 |工作台|workbench|
+|超文本标记语言（HTML）|HyperText Markup Language|
+|层叠样式表（CSS）|Cascading Style Sheet|
+|（JS）|JavaScript|
 |网页视图（Webview）|Webview|
 |编程语言|programming language|
 |运行时（runtime）|runtime|
