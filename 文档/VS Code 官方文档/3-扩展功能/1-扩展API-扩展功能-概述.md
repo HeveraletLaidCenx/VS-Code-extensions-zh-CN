@@ -168,6 +168,8 @@
 
 ## 扩展准则
 
+![扩展准则](../../../文档/VS%20Code%20官方文档/扩展准则.png)
+
 为了让你的扩展融入 **VS Code** 的用户界面中，请参阅 [扩展准则](https://code.visualstudio.com/api/references/extension-guidelines) ，其中你可以学到如何实现创建 扩展 UI 的最佳实践、遵循首选的 **VS Code** 的工作流。
 
 ## 限制
