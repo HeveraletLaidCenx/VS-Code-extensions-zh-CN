@@ -49,7 +49,7 @@
 `Hello World` 扩展做了3件事儿：
 
 * 注册了 [onCommand](https://code.visualstudio.com/api/references/activation-events#onCommand)（以命令触发）[**激活事件**](https://code.visualstudio.com/api/references/activation-events)：`onCommand:helloworld.helloWorld`，因此扩展会在用户运行 `Hello World` 命令时被激活。
-* 用 [contributes.commands](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)（作用点.命令）[**作用点**](https://code.visualstudio.com/api/references/contribution-points) 来让 `Hello World` 命令在命令面板中可用，并且将它绑定到一个命令 ID `helloworld.helloWorld` 。
+* 用 [contributes.commands](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)（建立作用点.命令）[**作用点**](https://code.visualstudio.com/api/references/contribution-points) 来让 `Hello World` 命令在命令面板中可用，并且将它绑定到一个命令 ID `helloworld.helloWorld` 。
 * 用 [commands.registerCommand](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand)（命令.注册命令）[**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 来将一个函数绑定到注册了的命令 ID `helloworld.helloWorld` 上。
 
 理解这仨概念，在 **VS Code** 扩展编写中至关重要：
