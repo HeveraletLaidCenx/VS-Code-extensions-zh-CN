@@ -37,6 +37,7 @@
 |作用点|Contribution Points|
 |发布版本|release|
 |编写|authoring|
+|开发者、开发人员|developer|
 |问题（IS）|issue|
 
 表中部分：

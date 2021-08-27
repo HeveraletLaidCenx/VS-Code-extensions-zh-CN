@@ -48,9 +48,9 @@
 
 `Hello World` 扩展做了3件事儿：
 
-* 注册了 [onCommand](https://code.visualstudio.com/api/references/activation-events#onCommand) [**激活事件**](https://code.visualstudio.com/api/references/activation-events)：`onCommand:helloworld.helloWorld`，因此扩展会在用户运行 `Hello World` 命令时被激活。
-* 用 [contributes.commands](https://code.visualstudio.com/api/references/contribution-points#contributes.commands) [**作用点**](https://code.visualstudio.com/api/references/contribution-points) 来让 `Hello World` 命令在命令面板中可用，并且将它绑定到一个命令 ID `helloworld.helloWorld` 。
-* 用 [commands.registerCommand](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand) [**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 来将一个函数绑定到注册了的命令 ID `helloworld.helloWorld` 上。
+* 注册了 [onCommand](https://code.visualstudio.com/api/references/activation-events#onCommand)（以命令触发）[**激活事件**](https://code.visualstudio.com/api/references/activation-events)：`onCommand:helloworld.helloWorld`，因此扩展会在用户运行 `Hello World` 命令时被激活。
+* 用 [contributes.commands](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)（作用点.命令）[**作用点**](https://code.visualstudio.com/api/references/contribution-points) 来让 `Hello World` 命令在命令面板中可用，并且将它绑定到一个命令 ID `helloworld.helloWorld` 。
+* 用 [commands.registerCommand](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand)（命令.注册命令）[**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 来将一个函数绑定到注册了的命令 ID `helloworld.helloWorld` 上。
 
 理解这仨概念，在 **VS Code** 扩展编写中至关重要：
 
@@ -87,12 +87,12 @@
 
 ### 扩展清单
 
-每个 **VS Code** 扩展都必须有一个 `package.json` 作为它的 [扩展清单](https://code.visualstudio.com/api/references/extension-manifest)。 `package.json` 包括了一个 **Node.js 域** （比如 `scripts` 和 `devDependencies`）和 **VS Code 特定域** （比如 `publisher`、`activationEvents` 和 `contributes`）的组合。你可以在 [扩展清单参考](https://code.visualstudio.com/api/references/extension-manifest) 里找到所有 **VS Code 特定域** 的描述。这里列举其中一些最重要的域：
+每个 **VS Code** 扩展都必须有一个 `package.json` 作为它的 [扩展清单](https://code.visualstudio.com/api/references/extension-manifest)。 `package.json` 包括了一个 **Node.js 域** （比如 `scripts`（脚本） 和 `devDependencies`（开发依赖））和 **VS Code 特定域** （比如 `publisher`（发布者）、`activationEvents`（激活事件）和 `contributes`（建立作用点））的组合。你可以在 [扩展清单参考](https://code.visualstudio.com/api/references/extension-manifest) 里找到所有 **VS Code 特定域** 的描述。这里列举其中一些最重要的域：
 
-* `name` 和 `publisher`：**VS Code** 把 `<publisher>.<name>` 用作扩展的唯一 ID 。比如， `Hello World` 例子的 ID 是 `vscode-samples.helloworld-sample` 。 **VS Code** 使用此 ID 来唯一识别你的扩展。
+* `name`（名字）和 `publisher`（发布者）：**VS Code** 把 `<publisher>.<name>` 用作扩展的唯一 ID 。比如， `Hello World` 例子的 ID 是 `vscode-samples.helloworld-sample` 。 **VS Code** 使用此 ID 来唯一识别你的扩展。
 * `main`：扩展的入口。
 * `activationEvents` 和 `contributes`：[激活事件](https://code.visualstudio.com/api/references/activation-events) 和 [作用点](https://code.visualstudio.com/api/references/contribution-points) 。
-* `engines.vscode`: 指定了扩展依赖的 **VS Code 扩展API** 的所需最低版本。
+* `engines.vscode`（引擎.vscode）: 指定了扩展依赖的 **VS Code 扩展API** 的所需最低版本。
 
 > ↓ `package.json` 的文件内容
 
@@ -134,7 +134,7 @@
 
 ## 扩展入口文件
 
-扩展入口文件会导出两个函数： `activate` （启用）和 `deactivate` （停用）。 `activate` 在你注册了的 **激活事件** 发生的时候执行。 `deactivate` 让你有机会在扩展被停用前进行清理。对于很多扩展来说，可能并不需要进行显式清理， `deactivate` 在这种情况下也不需要，可以移除。但是如果扩展需要在 **VS Code** 关闭时，或者扩展被禁用、卸载时执行操作，那就需要使用 `deactivate` 了。
+扩展入口文件会导出两个函数： `activate` （激活）和 `deactivate` （停用）。 `activate` 在你注册了的 **激活事件** 发生的时候执行。 `deactivate` 让你有机会在扩展被停用前进行清理。对于很多扩展来说，可能并不需要进行显式清理， `deactivate` 在这种情况下也不需要，可以移除。但是如果扩展需要在 **VS Code** 关闭时，或者扩展被禁用、卸载时执行操作，那就需要使用 `deactivate` 了。
 
 **VS Code 扩展API** 在 [@types/vscode](https://www.npmjs.com/package/@types/vscode) 类型定义中声明。 `vscode` 类型定义的版本是由 `package.json` 中 `engines.vscode` 域中的值控制的。 `vscode` 类型在你代码中提供 智能感知提示、转到定义，以及其他的 **TypeScript** 语言功能。
 

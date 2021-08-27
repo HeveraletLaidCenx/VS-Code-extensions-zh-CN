@@ -122,7 +122,7 @@
 
 ## 编程型语言功能
 
-[编程型语言功能](https://code.visualstudio.com/api/language-extensions/overview#programmatic-language-features) 添加了丰富的编程语言支持，比如 鼠标悬停提示、转到定义、诊断错误、智能感知提示 和 CodeLens 。这些语言功能通过 [vscode.languages.*](https://code.visualstudio.com/api/references/vscode-api#languages) API 暴露。扩展可以直接使用这些 API，也可以编写一个语言服务器并使用 [**VS Code 语言服务器库**](https://github.com/microsoft/vscode-languageserver-node) 将其适配到 **VS Code** 。
+[编程型语言功能](https://code.visualstudio.com/api/language-extensions/overview#programmatic-language-features) 添加了丰富的编程语言支持，比如 鼠标悬停提示、转到定义、诊断错误、智能感知提示 和 CodeLens 。这些语言功能通过 [vscode.languages.*](https://code.visualstudio.com/api/references/vscode-api#languages)（vscode.语言） API 暴露。扩展可以直接使用这些 API，也可以编写一个语言服务器并使用 [**VS Code 语言服务器库**](https://github.com/microsoft/vscode-languageserver-node) 将其适配到 **VS Code** 。
 
 虽然我们提供了一个包含 [语言功能](https://code.visualstudio.com/api/language-extensions/programmatic-language-features) 和它们的预期用法，但是这并不限制你创造性地使用这些API。比如，CodeLens 和 鼠标悬停提示 就是个内嵌显示额外信息的好方法。而 诊断错误 可以被用来高亮拼写或代码风格的错误。
 

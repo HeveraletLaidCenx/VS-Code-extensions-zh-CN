@@ -13,7 +13,7 @@
 |命令|command|
 |Node包管理工具（npm）|Node package manager|
 |基于框架搭建、脚手架|scaffold|
-|【*非常规释义】建立|contribute|
+|【*非常规释义】建立作用点|contribute|
 |清单|manifest|
 |静态|static|
 |声明|declarations|
@@ -69,16 +69,16 @@ yo code
 
 # ↓ 以下为生成器的输出 ↓
 # ? What type of extension do you want to create? 
-选择 New Extension (TypeScript)
+选择扩展类型，这次选择 New Extension (TypeScript)
 # ? What's the name of your extension?
-HelloWorld
+输入扩展名字，这次输入 HelloWorld
 
 【之后的选项直接按 Enter 选择默认选项就好】
 
-# ? What's the identifier of your extension? helloworld（自动生成的）
-# ? What's the description of your extension? （默认留空）
+# ? What's the identifier of your extension? helloworld（默认是根据扩展名字自动生成的扩展标识符）
+# ? What's the description of your extension? （默认把扩展的描述留空）
 # ? Initialize a git repository? Yes（默认是，初始化为 git 仓库）
-# ? Bundle the source code with webpack? No（默认否）
+# ? Bundle the source code with webpack? No（默认否，不用 webpack 打包源代码）
 # ? Which package manager to use? npm（默认使用 npm 管理包）
 
 【这之后便会开始构建你的扩展项目，等待加载完成即可】
@@ -106,7 +106,7 @@ code ./helloworld
 让我们来稍微改改提示消息的内容：
 
 1. 在 `extension.ts` 文件中，将信息内容从 "Hello World from HelloWorld!" 更改为 "Hello VS Code"。
-2. 在新窗口中执行 **Developer: Reload Window** 命令。
+2. 在新窗口中执行 **Developer: Reload Window** （开发人员：重新加载窗口）命令【也可以使用 `Ctrl+R` 组合快捷键达到一样的效果】。
 3. 再次执行 **Hello World** 命令。
 
 这次你应该看到更新之后的信息啦~
@@ -118,8 +118,8 @@ code ./helloworld
 完成了新手任务之后，不如来试试挑战进阶任务？比如下边这些：
 
 * 给 **Hello World** 命令在命令面板指定一个新名称。
-* [建立](https://code.visualstudio.com/api/references/contribution-points) 另一个命令，实现在通知消息中显示当前时间的功能。 **作用点** 是你在 `package.json` [扩展清单](https://code.visualstudio.com/api/references/extension-manifest) 中为了扩展 **VS Code** 而做的静态声明，比如给你的扩展添加命令、菜单 或 键位绑定。
-* 把 `vscode.window.showInformationMessage` 替换为另一个 [**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 调用来实现显示一条警告消息。
+* 给另一个命令 [建立作用点](https://code.visualstudio.com/api/references/contribution-points) ，实现在通知消息中显示当前时间的功能。 **作用点** 是你在 `package.json` [扩展清单](https://code.visualstudio.com/api/references/extension-manifest) 中为了扩展 **VS Code** 而做的静态声明，比如给你的扩展添加命令、菜单 或 键位绑定。
+* 把 `vscode.window.showInformationMessage` （vscode.窗口.显示信息消息）替换为另一个 [**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 调用来实现显示一条警告消息。
 
 ## Debug 扩展
 
