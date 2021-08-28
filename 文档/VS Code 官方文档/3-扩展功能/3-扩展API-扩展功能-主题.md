@@ -43,9 +43,9 @@
 
 就像你在上边的图示中看到的那样，颜色主题既可以定义 UI 组件的颜色，也可以定义编辑器中的文本高亮颜色。
 
-* `colors` （颜色）映射控制 UI 组件的颜色。
+* `colors`（颜色）映射控制 UI 组件的颜色。
 * `tokenColors`（标记颜色） 映射定义了编辑器中文本高亮的颜色和样式。更多相关信息请参阅 [语法高亮指导](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide) 的文章。
-* `semanticTokenColors`（语义标记颜色） 映射，也就是 `semanticHighlighting` （语义高亮）的设置允许增强编辑器中的高亮表现。关于这部分内容，在 [语义高亮指导](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide) 中解释了相关的 API 。
+* `semanticTokenColors`（语义标记颜色） 映射，也就是 `semanticHighlighting`（语义高亮）的设置允许增强编辑器中的高亮表现。关于这部分内容，在 [语义高亮指导](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide) 中解释了相关的 API 。
 
 关于颜色主题，我们有 [颜色主题指导](https://code.visualstudio.com/api/extension-guides/color-theme) 和 [颜色主题示例](https://github.com/microsoft/vscode-extension-samples/tree/main/theme-sample) 向你展示如何创建一个主题。
 

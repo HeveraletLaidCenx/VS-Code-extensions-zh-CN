@@ -119,7 +119,7 @@ code ./helloworld
 
 * 给 **Hello World** 命令在命令面板指定一个新名称。
 * 给另一个命令 [建立作用点](https://code.visualstudio.com/api/references/contribution-points) ，实现在通知消息中显示当前时间的功能。 **作用点** 是你在 `package.json` [扩展清单](https://code.visualstudio.com/api/references/extension-manifest) 中为了扩展 **VS Code** 而做的静态声明，比如给你的扩展添加命令、菜单 或 键位绑定。
-* 把 `vscode.window.showInformationMessage` （vscode.窗口.显示信息消息）替换为另一个 [**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 调用来实现显示一条警告消息。
+* 把 `vscode.window.showInformationMessage`（vscode.窗口.显示信息消息）替换为另一个 [**扩展API**](https://code.visualstudio.com/api/references/vscode-api) 调用来实现显示一条警告消息。
 
 ## Debug 扩展
 

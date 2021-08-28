@@ -24,7 +24,7 @@
 ## 修改内容
 
 * 在修改 `src/extension.ts` 中的代码后，可以从调试工具栏中重新启动扩展。
-* 也可以通过按 `Ctrl+R` （Windows）或 `Cmd+R` （MacOS）来重新加载 VS Code 窗口和你的扩展，来加载你所做的修改。
+* 也可以通过按 `Ctrl+R`（Windows）或 `Cmd+R`（MacOS）来重新加载 VS Code 窗口和你的扩展，来加载你所做的修改。
 
 ## 探索API
 
@@ -34,7 +34,7 @@
 
 * 点击左侧图标栏中的 Debug 按钮【图标看起来是趴在三角形播放键上的虫虫】  
   ![Debug 按钮](img/Debug按钮.png)  
-  呼出 Debug 侧边面板，或使用快捷键 `Ctrl+Shift+D` （Windows）或 `Cmd+Shift+D` （MacOS）呼出。从启动配置下拉菜单【在 Debug 侧边面板的顶部】中选择 `Extension Tests` （扩展测试）。
+  呼出 Debug 侧边面板，或使用快捷键 `Ctrl+Shift+D`（Windows）或 `Cmd+Shift+D`（MacOS）呼出。从启动配置下拉菜单【在 Debug 侧边面板的顶部】中选择 `Extension Tests`（扩展测试）。
   ![启动配置下拉菜单](img/启动配置下拉菜单.png)
 * 按 `F5` 来在加载了你的扩展的新窗口中运行测试。
 * 在调试控制台查看输出的测试结果。  
