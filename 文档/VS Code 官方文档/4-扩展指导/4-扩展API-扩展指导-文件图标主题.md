@@ -30,7 +30,7 @@
 
 在整个 **Visual Studio Code** 的 UI 中，在文件名旁边会显示对应的图标，而扩展可以建立新的文件图标集供用户从中选择。
 
-## 添加新的文件图标主题
+## 添加一个新的文件图标主题
 
 你可以从 图标（最好是SVG） 和 图标字体 来创建你自己的文件图标主题。可以看看这两个内置主题当做例子：[Minimal](https://github.com/microsoft/vscode/tree/main/extensions/theme-defaults) 和 [Seti](https://github.com/microsoft/vscode/tree/main/extensions/theme-seti) 。
 
@@ -50,7 +50,9 @@
 }
 ```
 
-`id` 是图标主题的标识符。它也在设置中作为标识符，所以确保它唯一且具有可读性（有意义、让人能区分出来这是你的主题）。`label` 会在文件图标主题选择器的下拉列表中显示。而 `path` 则指向扩展中定义了图标集的文件。如果你的图标集的名称符合 `*icon-theme.json` 的命名格式，那么你将在 **VS Code** 中获得 自动补全支持 和鼠标悬停提示。
+* `id` 是图标主题的标识符。它也在设置中作为标识符，所以确保它唯一且具有可读性（有意义、让人能区分出来这是你的主题）。
+* `label` 会在文件图标主题选择器的下拉列表中显示。
+* `path` 则指向扩展中定义了图标集的文件。如果你的图标集的名称符合 `*icon-theme.json` 的命名格式，那么你将在 **VS Code** 中获得 自动补全支持 和鼠标悬停提示。
 
 ### 文件图标集 文件
 
@@ -140,9 +142,13 @@
 
 ### 字体定义
 
-`fonts`（字体） 部分让你可以声明任意数量的要使用的 图形字符字体。你可以在之后的 图标定义 中引用这些字体。如果 图标定义 没有特别指明 字体ID ，则第一个声明的字体会被用作其默认值。
+`fonts`（字体） 部分让你可以声明任意数量的你想使用的 图形字符字体。
 
-把字体文件复制到你的扩展，并且对应地设置其路径。推荐使用 [WOFF](https://developer.mozilla.org/docs/Web/Guide/WOFF) 字体。
+你可以在之后的 图标定义 中引用这些字体。如果 图标定义 没有特别指明 字体ID ，则第一个声明的字体会被用作其默认值。
+
+把字体文件复制到你的扩展，并且对应地设置其路径。
+
+推荐使用 [WOFF](https://developer.mozilla.org/docs/Web/Guide/WOFF) 字体。
 
 * 把format（格式）设置为 `woff` 。
 * weight（字重） 属性的值是在 [这里](https://developer.mozilla.org/docs/Web/CSS/font-weight#Values) 定义的。
