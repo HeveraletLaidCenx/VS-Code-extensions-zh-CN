@@ -93,7 +93,7 @@
 
 1. 在 **命令面板** ，使用 **Developer: Generate Color Theme from Current Settings**（开发人员：使用当前设置生成颜色主题） 命令来生成一个主题文件
 
-2. 使用 **VS Code** 的 [Yeoman](https://yeoman.io/) 扩展生成器来生成一个新的主题扩展：
+2. 使用 **VS Code** 的 [**Yeoman**](https://yeoman.io/) 扩展生成器来生成一个新的主题扩展：
 
    ```powershell
    # 如果你在之前的章节已经安装过了 Yeoman，就不用执行下边一行的这个安装步骤了
@@ -125,7 +125,7 @@
 }
 ```
 
-> **提示：** 
+> **提示：**
 >
 > * 把你的颜色扩展文件名设置成拥有 `-color-theme.json` 后缀的样子，然后就可以在编辑的时候获得 鼠标悬停提示、代码自动补全、颜色装饰器、颜色选择器的功能。
 >* [ColorSublime](https://colorsublime.github.io/) 中有数百个现成的 TextMate 主题可供选择。选择你喜欢的主题然后复制它的下载链接，就可以在 Yeoman 扩展生成器 或者 你的扩展 中使用啦。它的格式大概形如： `"https://raw.githubusercontent.com/Colorsublime/Colorsublime-Themes/master/themes/(name).tmTheme"`
@@ -151,7 +151,7 @@
 
 ## 添加一个新的 颜色ID
 
-颜色ID也可以由扩展通过 [颜色作用点](https://code.visualstudio.com/api/references/contribution-points#contributes.colors) 来建立。当你在 `workbench.colorCustomizations`（工作台.颜色自定义）设置 和 颜色主题定义文件 中，使用代码自动补全时，这些颜色会出现在代码自动补全的候选中。用户可以在 [扩展作用点](https://code.visualstudio.com/docs/editor/extension-marketplace#_extension-details) 选项卡中看到扩展定义的颜色。
+也可以由扩展通过 [颜色作用点](https://code.visualstudio.com/api/references/contribution-points#contributes.colors) 来建立 颜色ID 的作用点。当你在 `workbench.colorCustomizations`（工作台.颜色自定义）设置 和 颜色主题定义文件 中，使用代码自动补全时，这些颜色会出现在代码自动补全的候选中。用户可以在 [扩展作用点](https://code.visualstudio.com/docs/editor/extension-marketplace#_extension-details) 选项卡中看到扩展定义的颜色。
 
 ## 跟进一步
 

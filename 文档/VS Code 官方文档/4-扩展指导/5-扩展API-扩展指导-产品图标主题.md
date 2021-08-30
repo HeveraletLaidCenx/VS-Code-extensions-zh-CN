@@ -48,9 +48,11 @@
 }
 ```
 
-* `id` 是产品图标主题的标识符。它也在设置中作为标识符，所以确保它唯一且具有可读性（有意义、让人能区分出来这是你的主题）。
-* `label` 会在产品图标主题选择器的下拉列表中显示。
-* `path` 则指向扩展中定义了图标集的文件。如果你的图标集的名称符合 `*product-icon-theme.json` 的命名格式，那么你将在 **VS Code** 中获得 自动补全支持 和鼠标悬停提示。
+|字段名|翻译|字段含义|
+|----|----|----|
+|`id`|标识符|是产品图标主题的标识符。它也在设置中也被用作标识符，所以确保它唯一且具有可读性（有意义、让人能区分出来这是你的主题）。|
+|`label`|标签|会在产品图标主题选择器的下拉列表中显示。|
+|`path`|路径|则指向扩展中定义了图标集的文件。如果你的图标集的名称符合 `*product-icon-theme.json` 的命名格式，那么你将在 **VS Code** 中获得 自动补全支持 和鼠标悬停提示。|
 
 ## 产品图标定义文件
 
@@ -105,7 +107,7 @@
 }
 ```
 
-可以在 [图标参考](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) 中，找到一个包含所有图标标识符的列表。
+可以在 [图标参考](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) 中，找到一个包含所有 图标ID 的列表。
 
 ## 开发 和 测试
 
@@ -117,7 +119,7 @@
 
 使用 **Preferences: Product Icon Theme**（首选项：产品图标主题） 命令来在产品图标主题之间切换。
 
-如果想找出来在 **VS Code** UI 中某个位置使用的是哪个图标，从 **Help > Toggle Developer Tools**（帮助 > 切换到开发人员工具） 打开 开发人员工具
+如果想找出来在 **VS Code** UI 中某个位置使用的是哪个图标，从 **Help > Toggle Developer Tools**（帮助 > 切换开发人员工具） 打开 开发人员工具
 
 ![打开开发人员工具](img/打开开发人员工具.png)
 

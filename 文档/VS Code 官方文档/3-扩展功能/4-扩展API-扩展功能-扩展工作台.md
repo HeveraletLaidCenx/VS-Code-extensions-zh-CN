@@ -36,10 +36,10 @@
 
 ![扩展工作台](img/扩展工作台.jpg)
 
-* **活动栏**：[Azure App 服务扩展](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) 添加了一个 [视图容器](https://code.visualstudio.com/api/extension-capabilities/extending-workbench#view-container)
-* **侧边栏**：内置的 [NPM extension](https://github.com/microsoft/vscode/tree/main/extensions/npm) 在 资源管理器视图 里添加了一个 [树视图](https://code.visualstudio.com/api/extension-capabilities/extending-workbench#tree-view)
-* **编辑器组**：内置的 [Markdown 扩展](https://github.com/microsoft/vscode/tree/main/extensions/markdown-language-features) 在 编辑器组里，其他编辑器的旁边，添加了一个 [Webview](https://code.visualstudio.com/api/extension-capabilities/extending-workbench#webview)
-* **状态栏**： [VSCodeVim 扩展](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) 在状态栏里添加了一个 [状态栏项目](https://code.visualstudio.com/api/extension-capabilities/extending-workbench#status-bar-item)
+* **活动栏** —— [Azure App 服务扩展](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) 添加了一个 [视图容器](https://code.visualstudio.com/api/extension-capabilities/extending-workbench#view-container)
+* **侧边栏** —— 内置的 [NPM extension](https://github.com/microsoft/vscode/tree/main/extensions/npm) 在 资源管理器视图 里添加了一个 [树视图](https://code.visualstudio.com/api/extension-capabilities/extending-workbench#tree-view)
+* **编辑器组** —— 内置的 [Markdown 扩展](https://github.com/microsoft/vscode/tree/main/extensions/markdown-language-features) 在 编辑器组里，其他编辑器的旁边，添加了一个 [Webview](https://code.visualstudio.com/api/extension-capabilities/extending-workbench#webview)
+* **状态栏** —— [VSCodeVim 扩展](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) 在状态栏里添加了一个 [状态栏项目](https://code.visualstudio.com/api/extension-capabilities/extending-workbench#status-bar-item)
 
 ## 视图容器
 

@@ -52,7 +52,7 @@
 
 ## 配置
 
-扩展可以通过 [contributes.configuration](https://code.visualstudio.com/api/references/contribution-points#contributes.configuration)（建立作用点.配置） 作用点 来建立扩展特定的设置，并通过 [workspace.getConfiguration](https://code.visualstudio.com/api/references/vscode-api#workspace.getConfiguration)（工作区.获取配置） API 来读取它们。
+扩展可以通过 [contributes.configuration](https://code.visualstudio.com/api/references/contribution-points#contributes.configuration)（建立作用点.配置） 作用点 来建立特定作用于某个扩展的设置，并通过 [workspace.getConfiguration](https://code.visualstudio.com/api/references/vscode-api#workspace.getConfiguration)（工作区.获取配置） API 来读取它们。
 
 ## 键位绑定
 
@@ -66,10 +66,12 @@
 
 对于存储数据，有4个选择：
 
-* [ExtensionContext.workspaceState](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.workspaceState)（扩展上下文.工作区状态）: 一个可以让你在其中记录键值对的工作区存储。**VS Code** 会管理这部分存储，并在再次打开同一个工作区的时候恢复它们。
-* [ExtensionContext.globalState](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.globalState)（扩展上下文.全局状态）: 一个可以让你在其中记录键值对的全局存储。**VS Code** 会管理这部分存储，并在每次扩展激活的时候恢复它。你可以在 `globalState` 中的 `setKeysForSync` 方法里设置同步的键，来选择性地在全局存储中同步键值对。
-* [ExtensionContext.storagePath](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.storagePath)（扩展上下文.存储路径）: 一个指向你的扩展拥有读写访问权限的，工作区特定的存储路径。如果你需要存储只从当前工作区访问的大文件，这是个不错的选择。
-* [ExtensionContext.globalStoragePath](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.globalStoragePath)（扩展上下文.全局存储路径）: 一个指向你的扩展拥有读写访问权限的全局存储路径。如果你需要存储所有工作区都可以访问的大文件，这是个不错的选择。
+|||
+|----|----|
+|[ExtensionContext.workspaceState](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.workspaceState)（扩展上下文.工作区状态）|一个可以让你在其中记录键值对的工作区存储。**VS Code** 会管理这部分存储，并在再次打开同一个工作区的时候恢复它们。|
+|[ExtensionContext.globalState](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.globalState)（扩展上下文.全局状态）|一个可以让你在其中记录键值对的全局存储。**VS Code** 会管理这部分存储，并在每次扩展激活的时候恢复它。你可以在 `globalState` 中的 `setKeysForSync` 方法里设置同步的键，来选择性地在全局存储中同步键值对。|
+|[ExtensionContext.storagePath](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.storagePath)（扩展上下文.存储路径）|一个指向你的扩展拥有读写访问权限的，工作区特定的存储路径。如果你需要存储只从当前工作区访问的大文件，这是个不错的选择。|
+|[ExtensionContext.globalStoragePath](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.globalStoragePath)（扩展上下文.全局存储路径）|一个指向你的扩展拥有读写访问权限的全局存储路径。如果你需要存储所有工作区都可以访问的大文件，这是个不错的选择。|
 
 `ExtensionContext`（扩展上下文）可以在 [扩展入口文件](https://code.visualstudio.com/api/get-started/extension-anatomy#extension-entry-file) 中的 `activate` 函数里找到。
 
@@ -100,9 +102,9 @@ context.globalState.set(versionKey, currentVersion);
 
 几乎所有扩展都会需要在某些情况下向用户显示信息。**VS Code** 为显示不同严重程度的通知消息提供了三个 API ：
 
-* 信息消息： [window.showInformationMessage](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)（窗口.显示信息消息）
-* 警告消息： [window.showWarningMessage](https://code.visualstudio.com/api/references/vscode-api#window.showWarningMessage)（窗口.显示警告消息）
-* 错误消息：[window.showErrorMessage](https://code.visualstudio.com/api/references/vscode-api#window.showErrorMessage)（窗口.显示错误消息）
+* 信息消息 —— [window.showInformationMessage](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)（窗口.显示信息消息）
+* 警告消息 —— [window.showWarningMessage](https://code.visualstudio.com/api/references/vscode-api#window.showWarningMessage)（窗口.显示警告消息）
+* 错误消息 —— [window.showErrorMessage](https://code.visualstudio.com/api/references/vscode-api#window.showErrorMessage)（窗口.显示错误消息）
 
 ## 快速选取
 

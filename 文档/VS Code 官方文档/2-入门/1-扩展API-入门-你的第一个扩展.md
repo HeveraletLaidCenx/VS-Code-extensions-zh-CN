@@ -13,6 +13,7 @@
 |命令|command|
 |Node包管理工具（npm）|Node package manager|
 |基于框架搭建、脚手架|scaffold|
+|标识符（ID）|Identifier|
 |【*非常规释义】建立作用点|contribute|
 |清单|manifest|
 |静态|static|
@@ -44,12 +45,12 @@
 
 开始之前，需要检查一下环境，你需要安装 **Node.js** 和 **git** 。
 
-* [Node.js 英文官网](https://nodejs.org/en/)
-* [Node.js 中文官网](https://nodejs.org/zh-cn/)
+* [**Node.js** 英文官网](https://nodejs.org/en/)
+* [**Node.js** 中文官网](https://nodejs.org/zh-cn/)
 
 ------
 
-* [Git 官网](https://git-scm.com/)
+* [**Git** 官网](https://git-scm.com/)
 
 之后使用命令来安装 [**Yeoman**](https://yeoman.io/) 和 [**VS Code Extension Generator**](https://www.npmjs.com/package/generator-code) （**VS Code 扩展生成器**）：
 
@@ -75,7 +76,7 @@ yo code
 
 【之后的选项直接按 Enter 选择默认选项就好】
 
-# ? What's the identifier of your extension? helloworld（默认是根据扩展名字自动生成的扩展标识符）
+# ? What's the identifier of your extension? helloworld（默认是根据扩展名字自动生成的扩展ID）
 # ? What's the description of your extension? （默认把扩展的描述留空）
 # ? Initialize a git repository? Yes（默认是，初始化为 git 仓库）
 # ? Bundle the source code with webpack? No（默认否，不用 webpack 打包源代码）
@@ -89,7 +90,7 @@ code ./helloworld
 
 ![创建扩展项目](img/创建扩展项目.png)
 
-然后在 **VS Code** 中，按 `F5` 。这将会把你的扩展编译并运行到一个叫 **Extension Development Host** （**扩展开发宿主**）的新 VS Cdoe窗口中。
+然后在 **VS Code** 中，按 `F5` 。这将会把你的扩展编译并运行到一个叫 **Extension Development Host** （**扩展开发宿主**）的新 **VS Code** 窗口中。
 
 在新打开的窗口中，呼出 **命令面板** （按 `Ctrl+Shift+P` ），执行 **Hello World** 命令：
 
@@ -123,7 +124,7 @@ code ./helloworld
 
 ## Debug 扩展
 
-**VS Code** 的内置 Debug 功能可以容易地 Debug 扩展。通过点击某行旁边的行号槽设置断点，然后 **VS Code** 就会运行到断点处中断（或者说命中断点）。 你可以吧鼠标悬停在编辑器里的变量上，或者用左侧的运行视图来检查变量的值。调试控制台允许你对表达式求值。
+**VS Code** 的内置 Debug 功能可以容易地 Debug 扩展。通过点击某行旁边的行号槽设置断点，然后 **VS Code** 就会运行到断点处中断（或者说命中断点）。 你可以把鼠标悬停在编辑器里的变量上，或者用左侧的运行视图来检查变量的值。调试控制台允许你对表达式求值。
 
 ![设置断点](img/设置断点.png)
 
@@ -131,7 +132,7 @@ code ./helloworld
 
 ![表达式求值](img/表达式求值.png)
 
-你可以在 [Node.js Debug 文章](https://code.visualstudio.com/docs/nodejs/nodejs-debugging) 中了解更多在 **VS Code** 里 Debug **Node.js** 应用程序的内容。
+你可以在 [**Node.js** Debug 文章](https://code.visualstudio.com/docs/nodejs/nodejs-debugging) 中了解更多在 **VS Code** 里 Debug **Node.js** 应用程序的内容。
 
 ## 更进一步
 

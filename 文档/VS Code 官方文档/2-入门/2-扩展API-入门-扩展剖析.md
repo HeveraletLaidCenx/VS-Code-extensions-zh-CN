@@ -13,7 +13,6 @@
 |注册|register|
 |激活事件|Activation Event|
 |绑定|bind|
-|身份（ID）|Identity|
 |函数|function|
 |调用|invoke|
 |功能|capabilities|
@@ -21,7 +20,7 @@
 |编译|compile|
 |node 模块|node_modules|
 |任务|Tasks|
-|域|field|
+|域、字段|field|
 |唯一识别|uniquely identify|
 |入口|entry point|
 |激活|activate|
@@ -54,9 +53,9 @@
 
 理解这仨概念，在 **VS Code** 扩展编写中至关重要：
 
-* [**激活事件**](https://code.visualstudio.com/api/references/activation-events)：让你的扩展激活所依据的事件。
-* [**作用点**](https://code.visualstudio.com/api/references/contribution-points)：你在 `package.json` [扩展清单](https://code.visualstudio.com/api/get-started/extension-anatomy#extension-manifest) 中为了扩展 **VS Code** 而做的静态声明。
-* [**扩展API**](https://code.visualstudio.com/api/references/vscode-api)：一组你可以在你的扩展代码中调用的 **JavaScript** API 。
+* [**激活事件**](https://code.visualstudio.com/api/references/activation-events) —— 让你的扩展激活所依据的事件。
+* [**作用点**](https://code.visualstudio.com/api/references/contribution-points) —— 你在 `package.json` [扩展清单](https://code.visualstudio.com/api/get-started/extension-anatomy#extension-manifest) 中为了扩展 **VS Code** 而做的静态声明。
+* [**扩展API**](https://code.visualstudio.com/api/references/vscode-api) —— 一组你可以在你的扩展代码中调用的 **JavaScript** API 。
 
 一般情况下，你的扩展会组合使用 **作用点** 和 **扩展API** 来达到扩展 **VS Code** 的功能的目的。[扩展功能概述](https://code.visualstudio.com/api/extension-capabilities/overview) 将帮助你找到你的扩展功能对应的 **作用点** 和 **扩展API** 。
 
@@ -87,12 +86,14 @@
 
 ### 扩展清单
 
-每个 **VS Code** 扩展都必须有一个 `package.json` 作为它的 [扩展清单](https://code.visualstudio.com/api/references/extension-manifest)。 `package.json` 包括了一个 **Node.js 域** （比如 `scripts`（脚本） 和 `devDependencies`（开发依赖））和 **VS Code 特定域** （比如 `publisher`（发布者）、`activationEvents`（激活事件）和 `contributes`（建立作用点））的组合。你可以在 [扩展清单参考](https://code.visualstudio.com/api/references/extension-manifest) 里找到所有 **VS Code 特定域** 的描述。这里列举其中一些最重要的域：
+每个 **VS Code** 扩展都必须有一个 `package.json` 作为它的 [扩展清单](https://code.visualstudio.com/api/references/extension-manifest)。 `package.json` 包括了一个 **Node.js 域** （比如 `scripts`（脚本） 和 `devDependencies`（开发依赖））和 **VS Code 特定域** （比如 `publisher`（发布者）、`activationEvents`（激活事件）和 `contributes`（建立作用点））的组合。你可以在 [扩展清单参考](https://code.visualstudio.com/api/references/extension-manifest) 里找到所有 **VS Code 特定域** 的描述。这里列举其中一些最重要的字段：
 
-* `name`（名字）和 `publisher`（发布者）：**VS Code** 把 `<publisher>.<name>` 用作扩展的唯一 ID 。比如， `Hello World` 例子的 ID 是 `vscode-samples.helloworld-sample` 。 **VS Code** 使用此 ID 来唯一识别你的扩展。
-* `main`：扩展的入口。
-* `activationEvents` 和 `contributes`：[激活事件](https://code.visualstudio.com/api/references/activation-events) 和 [作用点](https://code.visualstudio.com/api/references/contribution-points) 。
-* `engines.vscode`（引擎.vscode）: 指定了扩展依赖的 **VS Code 扩展API** 的所需最低版本。
+|字段名|翻译|字段含义|
+|----|----|----|
+|`name` 和 `publisher`|名字 和 发布者|**VS Code** 把 `<publisher>.<name>`（发布者.名字） 用作扩展的唯一 ID 。比如， `Hello World` 例子的 ID 是 `vscode-samples.helloworld-sample` 。 **VS Code** 使用此 ID 来唯一识别你的扩展。|
+|`main`||扩展的入口。|
+|`activationEvents` 和 `contributes`||[激活事件](https://code.visualstudio.com/api/references/activation-events) 和 [作用点](https://code.visualstudio.com/api/references/contribution-points) 。|
+|`engines.vscode`|引擎.vscode|指定了扩展依赖的 **VS Code 扩展API** 的所需最低版本。|
 
 > ↓ `package.json` 的文件内容
 
