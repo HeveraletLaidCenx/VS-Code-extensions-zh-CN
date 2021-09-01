@@ -107,7 +107,7 @@ code ./helloworld
 让我们来稍微改改提示消息的内容：
 
 1. 在 `extension.ts` 文件中，将信息内容从 "Hello World from HelloWorld!" 更改为 "Hello VS Code"。
-2. 在新窗口中执行 **Developer: Reload Window** （开发人员：重新加载窗口）命令【也可以使用 `Ctrl+R` 组合快捷键达到一样的效果】。
+2. 在新窗口中执行 **Developer: Reload Window** （开发人员: 重新加载窗口）命令【也可以使用 `Ctrl+R` 组合快捷键达到一样的效果】。
 3. 再次执行 **Hello World** 命令。
 
 这次你应该看到更新之后的信息啦~

@@ -91,7 +91,7 @@
 
 在尝试了用 `workbench.colorCustomizations`（工作台.颜色自定义） 和 `editor.tokenColorCustomizations`（编辑器.标记颜色自定义）对主题颜色稍作修改之后，现在是时候来创建一个实质上的主题啦~
 
-1. 在 **命令面板** ，使用 **Developer: Generate Color Theme from Current Settings**（开发人员：使用当前设置生成颜色主题） 命令来生成一个主题文件
+1. 在 **命令面板** ，使用 **Developer: Generate Color Theme from Current Settings**（开发人员: 使用当前设置生成颜色主题） 命令来生成一个主题文件
 
 2. 使用 **VS Code** 的 [**Yeoman**](https://yeoman.io/) 扩展生成器来生成一个新的主题扩展：
 

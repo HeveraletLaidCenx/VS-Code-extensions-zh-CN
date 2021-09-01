@@ -20,6 +20,7 @@
 |编译|compile|
 |node 模块|node_modules|
 |任务|Tasks|
+|资源（src）|resource|
 |域、字段|field|
 |唯一识别|uniquely identify|
 |入口|entry point|
