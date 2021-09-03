@@ -2,6 +2,8 @@
 
 [原文链接，戳我前往](https://code.visualstudio.com/api/extension-guides/notebook)
 
+更新版本：截至2021-09-03
+
 ------
 
 翻译 by [赫雯勒莉特翡翠](https://github.com/HeveraletLaidCenx)
