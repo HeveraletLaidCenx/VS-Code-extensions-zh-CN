@@ -65,26 +65,36 @@ npm install -g yo generator-code
 运行 **生成器** ，这里我们选择创建一个 **TypeScript** 项目，然后根据 **生成器** 的提示，填写一些项目配置条目：
 
 ```powershell
-# 运行生成器
+# 【运行生成器】
 yo code
 
-# ↓ 以下为生成器的输出 ↓
-# ? What type of extension do you want to create? 
-选择扩展类型，这次选择 New Extension (TypeScript)
-# ? What's the name of your extension?
-输入扩展名字，这次输入 HelloWorld
+# 【↓ 以下为生成器的输出 ↓】
 
-【之后的选项直接按 Enter 选择默认选项就好】
+# ? What type of extension do you want to create?【你想创建什么类型的扩展？】
+    New Extension (TypeScript)
+# ? What's the name of your extension?【你的扩展的名字是什么？】
+    HelloWorld
 
-# ? What's the identifier of your extension? helloworld（默认是根据扩展名字自动生成的扩展ID）
-# ? What's the description of your extension? （默认把扩展的描述留空）
-# ? Initialize a git repository? Yes（默认是，初始化为 git 仓库）
-# ? Bundle the source code with webpack? No（默认否，不用 webpack 打包源代码）
-# ? Which package manager to use? npm（默认使用 npm 管理包）
+【之后的选项直接按 Enter 键 选择默认选项就好】
+
+# ? What's the identifier of your extension?【你的扩展的 ID 是什么？】
+【默认是根据扩展名字自动生成的扩展ID】
+    helloworld
+# ? What's the description of your extension?【你的扩展的描述是什么？】
+【默认把扩展的描述留空】
+# ? Initialize a git repository?【是否初始化一个 Git 仓库？】
+【默认是，初始化为 git 仓库】
+    Yes
+# ? Bundle the source code with webpack?【是否用 webpack 打包源代码？】
+【默认否，不用 webpack 打包源代码】
+    No
+# ? Which package manager to use?【是用哪个包管理器？】
+【默认使用 npm 管理包】
+    npm
 
 【这之后便会开始构建你的扩展项目，等待加载完成即可】
 
-# 将创建的扩展文件夹加载到 VS Code 的工作区内
+# 【将创建的扩展文件夹加载到 VS Code 的工作区内】
 code ./helloworld
 ```
 
