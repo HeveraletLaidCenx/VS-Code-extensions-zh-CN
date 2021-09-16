@@ -1,4 +1,4 @@
-# Semantic Highlight Guide
+# 语义高亮指导
 
 [原文链接，戳我前往](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide)
 
