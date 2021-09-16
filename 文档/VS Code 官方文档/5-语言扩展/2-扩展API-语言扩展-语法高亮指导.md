@@ -290,7 +290,7 @@ $ npx js-yaml syntaxes/abc.tmLanguage.yaml > syntaxes/abc.tmLanguage.json
 }
 ```
 
-除了 顶级入口 `injectionSelector`（注入选择器） 之外，语法本身就是个标准的 TextMate 语法。 `injectionSelector`（注入选择器） 是一个用来指定 注入语法应该被应用到的作用域 的 作用与选择器。在我们的例子中，我们想在所有 `//` 注释中都对 `TODO` 这个词进行高亮。这时，我们用 [作用域检查器](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector)，发现 JavaScript 中的双斜线注释的作用域是 `comment.line.double-slash`（注释.单行.双斜线），所以我们的注入选择器则是 `L:comment.line.double-slash` ，设置如下：
+除了 顶级入口 `injectionSelector`（注入选择器） 之外，语法本身就是个标准的 TextMate 语法。 `injectionSelector`（注入选择器） 是一个用来指定 注入语法应该被应用到的作用域 的 作用与选择器。在我们的例子中，我们想在所有 `//` 注释中都对 `TODO` 这个词进行高亮。这时，我们用 [作用域检查器](#作用域检查器)，发现 JavaScript 中的双斜线注释的作用域是 `comment.line.double-slash`（注释.单行.双斜线），所以我们的注入选择器则是 `L:comment.line.double-slash` ，设置如下：
 
 ```json
 {
