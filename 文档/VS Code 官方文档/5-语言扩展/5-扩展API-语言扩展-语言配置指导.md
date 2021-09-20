@@ -222,7 +222,7 @@ const Component = () =>
 }
 ```
 
-* 语言服务器折叠：语言服务器 会响应 带有一个折叠范围列表的 [`textDocument/foldingRange`（文本文档/折叠范围）](https://microsoft.github.io/language-server-protocol/specification#textDocument_foldingRange) 请求，**VS Code** 将把这些范围渲染为 折叠标记。更多与 语言服务器协议中的折叠支持 的内容请参阅 [编程型语言功能](https://code.visualstudio.com/api/language-extensions/programmatic-language-features) 。
+* 语言服务器折叠：语言服务器 会响应 带有一个折叠范围列表的 [`textDocument/foldingRange`（文本文档/折叠范围）](https://microsoft.github.io/language-server-protocol/specification#textDocument_foldingRange) 请求，**VS Code** 将把这些范围渲染为 折叠标记。更多与 语言服务器协议中的折叠支持 的内容请参阅 [编程型语言功能](6-扩展API-语言扩展-编程型语言功能.md) 。
 
 ## 词语模式
 

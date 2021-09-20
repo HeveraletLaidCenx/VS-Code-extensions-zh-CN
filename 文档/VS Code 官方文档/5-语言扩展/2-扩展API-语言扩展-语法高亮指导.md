@@ -52,7 +52,7 @@ TextMate 标记化引擎 和 渲染器 在同一个进程中运行，并且会�
 
 语义高亮 在 语法高亮 之上。而由于 语言服务器 可能需要一点时间来完成 加载 和 对项目的分析，所以 语义标记高亮 可能会在短暂的延迟之后才出现，
 
-本文重点介绍基于 TextMate 的标记化。语义标记化 和 主题 的内容会在 [语义高亮指导](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide) 中进行介绍。
+本文重点介绍基于 TextMate 的标记化。语义标记化 和 主题 的内容会在 [语义高亮指导](3-扩展API-语言扩展-语义高亮指导.md) 中进行介绍。
 
 ### TextMate 语法
 
@@ -190,7 +190,7 @@ TextMate 语法 依赖 [Oniguruma 正则表达式](https://macromates.com/manual
 
 ### 开发一个新的语法扩展
 
-要想快速生成一个新的 语法扩展 的话，可以使用 [**VS Code** 的 Yeoman 模板](https://code.visualstudio.com/api/get-started/your-first-extension) ，在终端中运行 `yo code` 然后选择 `New Language Support`（新语言支持） 选项：
+要想快速生成一个新的 语法扩展 的话，可以使用 [**VS Code** 的 Yeoman 模板](../2-入门/1-扩展API-入门-你的第一个扩展.md) ，在终端中运行 `yo code` 然后选择 `New Language Support`（新语言支持） 选项：
 
 ![创建新的语言支持](img/创建新的语言支持.png)
 
@@ -373,7 +373,7 @@ TextMate 主题规则是在 `tokenColors`（标记颜色） 中定义的，与�
 
 当对 标记 的 颜色 和 样式 进行评估时，当前标记的作用域 和 规则的选择器 是相匹配的，以此来找到每个 样式属性 的最具体的规则（前景色、粗体、斜体、下划线）。
 
-[颜色主题指导](https://code.visualstudio.com/api/extension-guides/color-theme#syntax-colors) 描述了如何创建一个颜色主题。而对于 语义标记 的 主题，则在 [语义高亮指导](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide#theming) 中进行解释。
+[颜色主题指导](../4-扩展指导/3-扩展API-扩展指导-颜色主题.md) 描述了如何创建一个颜色主题。而对于 语义标记 的 主题，则在 [语义高亮指导](3-扩展API-语言扩展-语义高亮指导.md) 中进行解释。
 
 ## 作用域检查器
 

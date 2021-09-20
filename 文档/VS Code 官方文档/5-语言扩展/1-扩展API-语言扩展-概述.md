@@ -1,4 +1,4 @@
-# Language Extensions Overview
+# 语言扩展概述
 
 [原文链接，戳我前往](https://code.visualstudio.com/api/language-extensions/overview)
 
@@ -45,9 +45,9 @@
 
 对于提供 声明式语法功能 的扩展，我们有三个指导：
 
-* [语法高亮 指导](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)：**VS Code** 对于语法高亮使用 TextMate 语法。这篇指导将带你编写一个简单的 TextMate 语法，然后把它转换成一个 **VS Code** 扩展。
-* [代码片段自动生成 指导](https://code.visualstudio.com/api/language-extensions/snippet-guide)：这篇指导解释了如何把一套代码片段打包到扩展中。
-* [语言配置 指导](https://code.visualstudio.com/api/language-extensions/language-configuration-guide)：**VS Code** 允许扩展为任何编程语言定义一个 **language configuration（语言配置）** 。这个文件控制基础的编辑功能，比如 注释切换、括号匹配/自动环绕内容 以及 代码区域折叠（旧版）。
+* [语法高亮指导](2-扩展API-语言扩展-语法高亮指导.md)：**VS Code** 对于语法高亮使用 TextMate 语法。这篇指导将带你编写一个简单的 TextMate 语法，然后把它转换成一个 **VS Code** 扩展。
+* [代码片段指导](4-扩展API-语言扩展-代码片段指导.md)：这篇指导解释了如何把一套代码片段打包到扩展中。
+* [语言配置指导](5-扩展API-语言扩展-语言配置指导.md)：**VS Code** 允许扩展为任何编程语言定义一个 **语言配置** 。这个文件控制基础的编辑功能，比如 注释切换、括号匹配/自动环绕内容 以及 代码区域折叠（旧版）。
 
 ## 编程语言功能
 
@@ -63,7 +63,7 @@
 |Refactoring|重构代码|
 |Folding|折叠代码区域|
 
-完整的功能列表请查看 [编程语言功能](https://code.visualstudio.com/api/language-extensions/programmatic-language-features) 。
+完整的功能列表请查看 [编程型语言功能](6-扩展API-语言扩展-编程型语言功能.md)。
 
 ![多-语言服务器](img/多-语言服务器.png)
 
@@ -71,11 +71,11 @@
 
 通过对 语言服务器（一个静态代码分析工具） 和 语言客户端（通常是一个源代码编辑器）之间的通信进行标准化， [语言服务器协议](https://microsoft.github.io/language-server-protocol/) 让扩展的作者可以仅编写一个 代码分析程序，然后把它重用到多个编辑器中。
 
-在 [编程语言功能](https://code.visualstudio.com/api/language-extensions/programmatic-language-features) 列表中，你可以找到所有的 **VS Code** 语言功能，以及它们如何映射到 [语言服务器协议说明](https://microsoft.github.io/language-server-protocol/specification) 。
+在 [编程型语言功能](6-扩展API-语言扩展-编程型语言功能.md) 列表中，你可以找到所有的 **VS Code** 语言功能，以及它们如何映射到 [语言服务器协议说明](https://microsoft.github.io/language-server-protocol/specification) 。
 
 我们提供了一个 深入的指导，来解释如何在 **VS Code** 中实现一个 语言服务器：
 
-* [语言服务器 扩展指导](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide)
+* [语言服务器扩展指导](7-扩展API-语言扩展-语言服务器扩展指导.md)
 
 ![语言服务器可以重用给多个编辑器](img/语言服务器可以重用给多个编辑器.png)
 

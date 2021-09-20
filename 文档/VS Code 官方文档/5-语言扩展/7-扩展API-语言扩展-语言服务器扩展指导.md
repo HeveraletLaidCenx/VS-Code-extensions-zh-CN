@@ -27,7 +27,7 @@
 
 ## 概述
 
-就像你在上一节： [编程型语言功能](https://code.visualstudio.com/api/language-extensions/programmatic-language-features) 文章中看到的那样，可以选择直接使用 `languages.*`（语言.*） API 来直接实现语言功能。
+就像你在上一节： [编程型语言功能](6-扩展API-语言扩展-编程型语言功能.md) 文章中看到的那样，可以选择直接使用 `languages.*`（语言.*） API 来直接实现语言功能。
 
 但——是——，语言服务器 也能做得到哟~
 
@@ -40,7 +40,7 @@
 
 语言服务器 是一类特殊的 **Visual Studio Code** 扩展，为许多编程语言提供编辑体验。
 
-用语言服务器，可以实现：代码自动补全、错误检查（诊断）、转到定义，以及许多其他的 **VS Code** 支持的 [语言功能](https://code.visualstudio.com/api/language-extensions/programmatic-language-features) 。
+用语言服务器，可以实现：代码自动补全、错误检查（诊断）、转到定义，以及许多其他的 **VS Code** 支持的 [语言功能](6-扩展API-语言扩展-编程型语言功能.md) 。
 
 然而，在 **VS Code** 中实现对语言功能的支持时，我们发现了 **三个常见的问题** ：
 
@@ -882,7 +882,7 @@ async function sleep(ms: number) {
 * *文档链接*：计算并解析文档中的链接。
 * *文档颜色*：计算并解析文档中的颜色，以在编辑器中提供颜色选择器。
 
-[编程型语言功能](https://code.visualstudio.com/api/language-extensions/programmatic-language-features) 文章中描述了以上每项语言功能，以及如何 通过语言服务器 或者 直接从你的扩展使用扩展API 来 实现它们。
+[编程型语言功能](6-扩展API-语言扩展-编程型语言功能.md) 文章中描述了以上每项语言功能，以及如何 通过语言服务器 或者 直接从你的扩展使用扩展API 来 实现它们。
 
 ### 增量文本文档同步
 

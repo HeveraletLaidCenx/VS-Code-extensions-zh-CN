@@ -58,7 +58,7 @@
 
 ## 使用 TextMate 代码片段
 
-你也可以通过使用 [yo code 扩展生成器](https://code.visualstudio.com/api/get-started/your-first-extension) 来将 TextMate 代码片段（.tmSnippets格式的文件）添加到你的 **VS Code** 扩展中。
+你也可以通过使用 [yo code 扩展生成器](../2-入门/1-扩展API-入门-你的第一个扩展.md) 来将 TextMate 代码片段（.tmSnippets格式的文件）添加到你的 **VS Code** 扩展中。
 
 扩展生成器中有一个 `New Code Snippets`（新的代码片段） 选项，让你可以指向一个 包含多个 `.tmSnippets` 格式文件的文件夹，它们将被打包到一个 **VS Code** 代码片段扩展 中。生成器还支持Sublime 代码片段（.sublime-snippets格式的文件）。
 

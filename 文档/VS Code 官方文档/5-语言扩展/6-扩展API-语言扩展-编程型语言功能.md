@@ -23,7 +23,7 @@
 
 ## 概述
 
-编程型语言功能 是一组由 [`vscode.languages.*`（vscode.语言.*）](https://code.visualstudio.com/api/references/vscode-api#languages) API 提供支持的智能编辑功能。通常有两种方法可以在 **Visual Studio Code** 中提供动态语言功能。让我们以 [鼠标悬停提示](https://code.visualstudio.com/api/language-extensions/programmatic-language-features#hover) 作为例子：
+编程型语言功能 是一组由 [`vscode.languages.*`（vscode.语言.*）](https://code.visualstudio.com/api/references/vscode-api#languages) API 提供支持的智能编辑功能。通常有两种方法可以在 **Visual Studio Code** 中提供动态语言功能。让我们以 [鼠标悬停提示](#显示鼠标悬停提示) 作为例子：
 
 ```typescript
 vscode.languages.registerHoverProvider('javascript', {
@@ -35,7 +35,7 @@ vscode.languages.registerHoverProvider('javascript', {
 });
 ```
 
-就像上边展示的这样，[`vscode.languages.registerHoverProvider`（vscode.语言.注册鼠标悬停提示）](https://code.visualstudio.com/api/references/vscode-api#languages.registerHoverProvider) API 为给 JavaScript 文件提供鼠标悬停提示内容 提供了一种简单的方法。当这个扩展被激活时，每当你的鼠标悬停在 JavaScript 代码上方时，**VS Code** 会查询所有 JavaScript 的 [`HoverProvider`（鼠标悬停提示提供程序）](https://code.visualstudio.com/api/references/vscode-api#HoverProvider) ，并在 悬停小部件 中显示结果。下面的 [语言功能列表](https://code.visualstudio.com/api/language-extensions/programmatic-language-features#language-features-listing) 和 gif动态图示 给你提供了一个找到自己扩展想要使用的 **VS Code** API / LSP 方法的快捷途径。
+就像上边展示的这样，[`vscode.languages.registerHoverProvider`（vscode.语言.注册鼠标悬停提示）](https://code.visualstudio.com/api/references/vscode-api#languages.registerHoverProvider) API 为给 JavaScript 文件提供鼠标悬停提示内容 提供了一种简单的方法。当这个扩展被激活时，每当你的鼠标悬停在 JavaScript 代码上方时，**VS Code** 会查询所有 JavaScript 的 [`HoverProvider`（鼠标悬停提示提供程序）](https://code.visualstudio.com/api/references/vscode-api#HoverProvider) ，并在 悬停小部件 中显示结果。下面的 [语言功能列表](#语言功能列表) 和 gif动态图示 给你提供了一个找到自己扩展想要使用的 **VS Code** API / LSP 方法的快捷途径。
 
 还有一种实现途径是通过实现一个遵循 [LSP（语言服务器协议）](https://microsoft.github.io/language-server-protocol/) 的 语言服务器。它的工作方式是：
 
@@ -51,7 +51,7 @@ vscode.languages.registerHoverProvider('javascript', {
 * 语言服务器 可以由任意语言编写
 * 语言服务器可以被多重编辑器重用，用来提供智能编辑功能
 
-要想获得更加深入的指导，请查阅 [语言服务器扩展指导](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide) 。
+要想获得更加深入的指导，请查阅 [语言服务器扩展指导](7-扩展API-语言扩展-语言服务器扩展指导.md) 。
 
 ------
 
