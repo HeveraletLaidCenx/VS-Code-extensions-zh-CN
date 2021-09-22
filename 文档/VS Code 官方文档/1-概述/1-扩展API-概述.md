@@ -88,7 +88,7 @@
 * **语言扩展** —— 包括说明了如何添加对一种编程语言的支持的指导和代码示例。
 * **测试与发布** —— 包括对各种扩展开发文章的深入指导，比如 [测试](https://code.visualstudio.com/api/working-with-extensions/testing-extension) 和 [发布](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) 扩展。
 * **高级文章** —— 解释了如 [扩展 host](https://code.visualstudio.com/api/advanced-topics/extension-host)、[支持远程开发和 Github 代码空间](https://code.visualstudio.com/api/advanced-topics/remote-extensions)、[计划中的API](https://code.visualstudio.com/api/advanced-topics/using-proposed-api) 等高级概念。
-* **参考资料** —— 包括对 [VS Code API](https://code.visualstudio.com/api/references/vscode-api)、[作用点](https://code.visualstudio.com/api/references/contribution-points) 以及许多其他文章的详尽参考资料。
+* **参考资料** —— 包括对 [VS Code API](https://code.visualstudio.com/api/references/vscode-api)、[作用点](https://code.visualstudio.com/api/references/contribution-points) 以及许多其它文章的详尽参考资料。
 
 ## 更新了什么内容？
 

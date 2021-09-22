@@ -41,7 +41,7 @@
 
 单元可以是 **Markdown 单元** 也可以是 **代码单元** ，由 **VS Code** 的核心进行渲染。
 
-输出可以是很多种格式。有些输出格式由 **VS Code** 的核心进行渲染，比如纯文本、JSON、图像 和 HTML；而其他的，比如一些某些 App 专有的，或者互动式的程序，则是由扩展来进行渲染的。
+输出可以是很多种格式。有些输出格式由 **VS Code** 的核心进行渲染，比如纯文本、JSON、图像 和 HTML；而其它的，比如一些某些 App 专有的，或者互动式的程序，则是由扩展来进行渲染的。
 
 笔记本 中的 单元 是依靠 `NotebookSerializer`（笔记本序列化器） 来进行对文件系统的读写的，它会处理从文件系统读取到的数据，并把它转化成一个对 单元 的描述，也会把对 笔记本 进行的修改保存回文件系统。而 笔记本 中的 **代码单元** 可以被 `NotebookController`（笔记本控制器）执行，它会获取单元中的内容，根据内容来产生 零个 ~ 多个 输出，输出可以是纯文本、格式化的文档、互动式的程序等。App 专有的输出格式 和 互动式的程序 ，是由 `NotebookRenderer`（笔记本渲染器） 进行渲染的。
 
@@ -307,7 +307,7 @@ execution.replaceOutput([new vscode.NotebookCellOutput([
 * text/x-javascript（文本/实验性JS）
 * text/x-html（文本/实验性HTML）
 * text/x-rust（文本/实验性Rust）
-* ... text/x-LANGUAGE_ID（文本/实验性语言ID） 此处的 语言ID 可以是任何其他的内置的或者安装了的语言
+* ... text/x-LANGUAGE_ID（文本/实验性语言ID） 此处的 语言ID 可以是任何其它的内置的或者安装了的语言
 
 下面这个笔记本就用了内置的 Monaco 编辑器来显示一些 Rust 代码：
 
@@ -348,7 +348,7 @@ execution.replaceOutput([new vscode.NotebookCellOutput([
 }
 ```
 
-输出的渲染始终处于一个独立于其他 **VS Code** UI 而存在的 `iframe` 中，以此来保证它们不会意外地干扰 **VS Code**、造成性能下降而导致缓慢。作用点 指向一个 `entrypoint`（入口点） 脚本，它在输出被渲染之前加载到笔记本的 `iframe` 中。你的 `entrypoint`（入口点） 脚本 必须是一个单个的文件，你可以自己编写它，也可以借助 Webpack、Rollup、Parcel 等打包程序来创建它。
+输出的渲染始终处于一个独立于其它 **VS Code** UI 而存在的 `iframe` 中，以此来保证它们不会意外地干扰 **VS Code**、造成性能下降而导致缓慢。作用点 指向一个 `entrypoint`（入口点） 脚本，它在输出被渲染之前加载到笔记本的 `iframe` 中。你的 `entrypoint`（入口点） 脚本 必须是一个单个的文件，你可以自己编写它，也可以借助 Webpack、Rollup、Parcel 等打包程序来创建它。
 
 当它被加载后，在 **VS Code** 准备好渲染你的 笔记本渲染器 时，你的 `entrypoint`（入口点） 脚本 会从 `vscode-notebook-renderer`（vscode-笔记本-渲染器） 导出 `ActivationFunction`（激活函数） 来渲染你的 UI。比如，下边这段代码就会将你所有的 GitHub Issue 数据 作为 JSON 放入 单元 的输出中：
 
@@ -396,7 +396,7 @@ export const activate: ActivationFunction = (context) => ({
 
 ![渲染HTML视图显示Issue的单元输出](img/渲染HTML视图显示Issue的单元输出.png)
 
-如果你有容器外的元素，或者其他异步的进程，可以使用 `disposeOutputItem`（处理输出项目） 来销毁它们。这个事件会在输出被清除的时候、单元 被删除的时候、现有的单元要渲染新的输出的时候 触发。比如：
+如果你有容器外的元素，或者其它异步的进程，可以使用 `disposeOutputItem`（处理输出项目） 来销毁它们。这个事件会在输出被清除的时候、单元 被删除的时候、现有的单元要渲染新的输出的时候 触发。比如：
 
 ```typescript
 const intervals = new Map();
@@ -418,7 +418,7 @@ export const activate: ActivationFunction = (context) => ({
 });
 ```
 
-请牢记，一个 笔记本 中的所有输出都是： 在同一个 iframe 中，以不同元素进行渲染的。如果你要使用类似 `document.querySelector`（文档.查询选择器）之类的方法，请确保你把它的范围限制在了你想要查找的特定输出上，以此来避免和其他输出的冲突。在本例中，我们使用了 `element.querySelector`（元素.查询选择器） 来避免这个问题。
+请牢记，一个 笔记本 中的所有输出都是： 在同一个 iframe 中，以不同元素进行渲染的。如果你要使用类似 `document.querySelector`（文档.查询选择器）之类的方法，请确保你把它的范围限制在了你想要查找的特定输出上，以此来避免和其它输出的冲突。在本例中，我们使用了 `element.querySelector`（元素.查询选择器） 来避免这个问题。
 
 ### 交互式笔记本（和 笔记本控制器 通信）
 
@@ -514,7 +514,7 @@ globalThis.githubIssueCommentProvider = {
 };
 ```
 
-然后你就可以在 笔记本渲染器 中使用它了。你应该确保检查了 全局暴露的笔记本控制器的笔记本渲染器脚本 是可用的，因为其他开发人员可能会在没有实现 `githubIssueCommentProvider`（Github Issue 评论提供程序） 的笔记本中创建 Github 的 Issue 输出。这种情况下，我们仅仅在全局可用的时候才显示 **Load Comments（加载评论）** 按钮：
+然后你就可以在 笔记本渲染器 中使用它了。你应该确保检查了 全局暴露的笔记本控制器的笔记本渲染器脚本 是可用的，因为其它开发人员可能会在没有实现 `githubIssueCommentProvider`（Github Issue 评论提供程序） 的笔记本中创建 Github 的 Issue 输出。这种情况下，我们仅仅在全局可用的时候才显示 **Load Comments（加载评论）** 按钮：
 
 ```typescript
 const canLoadComments = globalThis.githubIssueCommentProvider !== undefined;
@@ -600,7 +600,7 @@ class Controller {
 |`optional`|可选的|当 扩展宿主 可用时，笔记本渲染器 能更好地进行消息传递，但它并不强制要求 安装 和 运行 该笔记本渲染器|
 |`never`|从不|笔记本渲染器 不要求 消息传递。|
 
-请首先考虑后两个选项，因为它们能保证 扩展 能被移植到 扩展宿主 可能不一定可用的其他环境中。
+请首先考虑后两个选项，因为它们能保证 扩展 能被移植到 扩展宿主 可能不一定可用的其它环境中。
 
 可以用以下方式来让 笔记本渲染器脚本 设置通信功能：
 

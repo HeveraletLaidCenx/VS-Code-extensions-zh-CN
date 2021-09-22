@@ -477,7 +477,7 @@ function updateWebviewForCat(panel: vscode.WebviewPanel, catName: keyof typeof c
 
 ## 加载本地内容
 
-出于安全原因，Webview 运行在一个隔离的环境中，不能直接访问本地资源。这意味着，要想从你的扩展加载 图像、CSS ，或者其他资源，或者是想从用户的当前工作区中加载任何内容的话，你必须使用 `Webview.asWebviewUri`（Webview.作为 Webview URI） 函数来把一个本地的 `file:` URI 转换成一个 能被 **VS Code** 用来加载本地资源的子集 的 特殊格式 URI 。
+出于安全原因，Webview 运行在一个隔离的环境中，不能直接访问本地资源。这意味着，要想从你的扩展加载 图像、CSS ，或者其它资源，或者是想从用户的当前工作区中加载任何内容的话，你必须使用 `Webview.asWebviewUri`（Webview.作为 Webview URI） 函数来把一个本地的 `file:` URI 转换成一个 能被 **VS Code** 用来加载本地资源的子集 的 特殊格式 URI 。
 
 想象一下，我们现在要把我们的 猫猫gif 打包到我们的扩展中，而不是像之前一样从网络来获取它们。要做到这点，我们先创建一个 到存储驱动器上的文件的 URI ，然后将这些 URI传递给 `asWebviewUri`（作为Webview URI） 函数：
 
@@ -522,7 +522,7 @@ vscode-resource:/Users/toonces/projects/vscode-cat-coding/media/cat.gif
 * 在你的扩展的安装目录中的
 * 在用户的当前活跃的工作区中的
 
-用 `WebviewOptions.localResourceRoots`（Webview 选项.本地资源根源） 来允许对其他本地资源的访问。
+用 `WebviewOptions.localResourceRoots`（Webview 选项.本地资源根源） 来允许对其它本地资源的访问。
 
 你也可以一直用 数据 URI 来直接把资源嵌入到 Webview 中。
 
@@ -767,7 +767,7 @@ function getWebviewContent() {
 
 ### 从 Webview 向 扩展 传递消息
 
-Webview 也可以把消息传回它所属的扩展。 这是通过在 Webview 中将 `postMessage`（发送消息） 函数用作一个特殊的 **VS Code** 扩展API 对象 来实现的。要访问 **VS Code** 扩展API 对象的话，在 Webview 中调用 `acquireVsCodeApi`（获取 VS Code 扩展 API） 即可。这个函数在每个会话中只能被调用一次。你必须保留这个方法返回的 **VS Code** 扩展API 实例，并且把它分发给任何需要它的其他函数。
+Webview 也可以把消息传回它所属的扩展。 这是通过在 Webview 中将 `postMessage`（发送消息） 函数用作一个特殊的 **VS Code** 扩展API 对象 来实现的。要访问 **VS Code** 扩展API 对象的话，在 Webview 中调用 `acquireVsCodeApi`（获取 VS Code 扩展 API） 即可。这个函数在每个会话中只能被调用一次。你必须保留这个方法返回的 **VS Code** 扩展API 实例，并且把它分发给任何需要它的其它函数。
 
 我们可以在我们的 **CatCoding（猫猫敲代码）** Webview 里使用 **VS Code** 扩展API ，并通过 `postMessage`（发送消息） 来在 当我们的猫猫在它的代码里引入一个 bug 时，向扩展发送警告：
 
@@ -905,7 +905,7 @@ function getWebviewContent() {
 
 可以考虑用一个辅助库来构建你的 HTML 字符串，或者至少确保用户工作区中的所有内容都经过了适当的筛选整理。
 
-但是绝对不要只单独依靠筛选整理来保证安全。确保遵循其他安全方面的最佳实践，比如添加 [内容安全策略](https://code.visualstudio.com/api/extension-guides/webview#content-security-policy) 来最小化潜在的内容注入的影响。
+但是绝对不要只单独依靠筛选整理来保证安全。确保遵循其它安全方面的最佳实践，比如添加 [内容安全策略](https://code.visualstudio.com/api/extension-guides/webview#content-security-policy) 来最小化潜在的内容注入的影响。
 
 ## 持续性
 
@@ -1030,6 +1030,6 @@ function getWebviewContent() {
 
 ![保持持续](img/保持持续.gif)
 
-发现没？当 Webview 被隐藏然后恢复的时候，计数器没有重置，不需要额外的代码！使用 `retainContextWhenHidden`（当隐藏时保持环境） 时，Webview 表现得就像网络浏览器中的后台选项卡。脚本和其他动态内容会暂停，但是当它恢复可见时会立刻继续。但是你不能向一个隐藏的 Webview 发送消息，即使当启用了 `retainContextWhenHidden`（当隐藏时保持环境） 时也不行。
+发现没？当 Webview 被隐藏然后恢复的时候，计数器没有重置，不需要额外的代码！使用 `retainContextWhenHidden`（当隐藏时保持环境） 时，Webview 表现得就像网络浏览器中的后台选项卡。脚本和其它动态内容会暂停，但是当它恢复可见时会立刻继续。但是你不能向一个隐藏的 Webview 发送消息，即使当启用了 `retainContextWhenHidden`（当隐藏时保持环境） 时也不行。
 
-虽然 `retainContextWhenHidden`（当隐藏时保持环境） 可能很吸引人，但是记住这会造成很高的内存消耗，仅应在其他保持状态的方法行不通的时候再考虑。
+虽然 `retainContextWhenHidden`（当隐藏时保持环境） 可能很吸引人，但是记住这会造成很高的内存消耗，仅应在其它保持状态的方法行不通的时候再考虑。

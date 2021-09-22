@@ -36,7 +36,7 @@
 
 ## 使用命令
 
-**VS Code** 有一大堆 [内置命令](https://code.visualstudio.com/api/references/commands) ，可以让你用于 和编辑器交互、控制 UI， 或者执行后台操作。许多扩展也把它们的核心功能暴露为命令，让用户和其他扩展可以利用。
+**VS Code** 有一大堆 [内置命令](https://code.visualstudio.com/api/references/commands) ，可以让你用于 和编辑器交互、控制 UI， 或者执行后台操作。许多扩展也把它们的核心功能暴露为命令，让用户和其它扩展可以利用。
 
 ### 以编程方式执行命令
 
@@ -204,7 +204,7 @@ export function activate(context: vscode.ExtensionContext) {
 * 可以从命令面板调用
 * 可以用快捷键调用
 * 可以通过 **VS Code** UI调用，比如通过编辑器的标题栏
-* 被作为一个让其他的扩展使用的 API
+* 被作为一个让其它的扩展使用的 API
 
 ### 控制命令应该在何时出现在命令面板中
 
@@ -233,7 +233,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 命令支持通过设置 `enablement`（启用） 属性来管理启用，`enablement`（启用） 的值是一个 [when 条件判断语句](https://code.visualstudio.com/api/references/when-clause-contexts) 。设置后启用属性将被应用到所有菜单和注册了的键位绑定。
 
-> **注**：`enablement`（启用） 和 菜单项的 `when` 条件 存在语义重叠。后者用于防止菜单全是不可用的项目。比如，一个用来分析 JavaScript 正则表达式的扩展，只应该 **when（当）** 文件是 JavaScript 时 才显示，而只有在光标在正则表达式的时候才 **enabled（启用）** 。这里， `when` 条件判断语句通过 但处于其他语言的文件中，不显示命令 来防止了混乱。强烈建议防止菜单变得乱七八糟的。
+> **注**：`enablement`（启用） 和 菜单项的 `when` 条件 存在语义重叠。后者用于防止菜单全是不可用的项目。比如，一个用来分析 JavaScript 正则表达式的扩展，只应该 **when（当）** 文件是 JavaScript 时 才显示，而只有在光标在正则表达式的时候才 **enabled（启用）** 。这里， `when` 条件判断语句通过 但处于其它语言的文件中，不显示命令 来防止了混乱。强烈建议防止菜单变得乱七八糟的。
 
 最后，菜单中显示的命令，像 命令面板 或者 上下文菜单 一样，以不同的方法实现了处理 是否启用命令。编辑器 和 资源管理器 的上下文菜单会在命令面板过滤命令时，对应地渲染菜单项的启用/禁用。
 

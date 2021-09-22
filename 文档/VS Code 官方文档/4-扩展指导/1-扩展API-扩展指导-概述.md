@@ -19,7 +19,7 @@
 |可主题化的|themable|
 |国际化（i18n）【奇怪的缩写增加了，如果是大写的话，首字母是I不是L，这个词是因为原来的单词比较长，所以取了首尾字母，中间的18是中间的字符数，真有你们的.jpg】|internationalization|
 |终端|terminal|
-|语言服务器协议（LSP）【特别注明，LSP这个缩写在计算机领域还有其他意思，避免混淆】|Language Server Protocol|
+|语言服务器协议（LSP）【特别注明，LSP这个缩写在计算机领域还有其它意思，避免混淆】|Language Server Protocol|
 
 表中部分：
 

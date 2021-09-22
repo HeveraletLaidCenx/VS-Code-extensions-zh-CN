@@ -138,7 +138,7 @@
 
 扩展入口文件会导出两个函数： `activate`（激活）和 `deactivate`（停用）。 `activate` 在你注册了的 **激活事件** 发生的时候执行。 `deactivate` 让你有机会在扩展被停用前进行清理。对于很多扩展来说，可能并不需要进行显式清理， `deactivate` 在这种情况下也不需要，可以移除。但是如果扩展需要在 **VS Code** 关闭时，或者扩展被禁用、卸载时执行操作，那就需要使用 `deactivate` 了。
 
-**VS Code 扩展API** 在 [@types/vscode](https://www.npmjs.com/package/@types/vscode) 类型定义中声明。 `vscode` 类型定义的版本是由 `package.json` 中 `engines.vscode` 域中的值控制的。 `vscode` 类型在你代码中提供 智能感知提示、转到定义，以及其他的 **TypeScript** 语言功能。
+**VS Code 扩展API** 在 [@types/vscode](https://www.npmjs.com/package/@types/vscode) 类型定义中声明。 `vscode` 类型定义的版本是由 `package.json` 中 `engines.vscode` 域中的值控制的。 `vscode` 类型在你代码中提供 智能感知提示、转到定义，以及其它的 **TypeScript** 语言功能。
 
 > ↓ `extension.ts` 的文件内容
 

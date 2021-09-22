@@ -24,7 +24,7 @@
 
 ## 概述
 
-**Visual Studio Code** 通过 语言扩展 来为不同的编程语言提供 智能编辑功能。**VS Code** 并不提供内置的语言支持，但是提供了一组支持丰富的语言功能的 API 。比如，他有一个捆绑的 [HTML](https://github.com/microsoft/vscode/tree/main/extensions/html) 扩展，让 **VS Code** 能为 HTML 文件显示 语法高亮。相似的，当你输入 `console.` 之后，智能感知提示会显示 `log` ，这是 [Typescript 语言功能](https://github.com/microsoft/vscode/tree/main/extensions/typescript-language-features) 扩展在起作用。
+**Visual Studio Code** 通过 语言扩展 来为不同的编程语言提供 智能编辑功能。**VS Code** 并不提供内置的语言支持，但是提供了一组支持丰富的语言功能的 API 。比如，他有一个捆绑的 [HTML](https://github.com/microsoft/vscode/tree/main/extensions/html) 扩展，让 **VS Code** 能为 HTML 文件显示 语法高亮。相似的，当你输入 `console.` 之后，智能感知提示会显示 `log` ，这是 [Typescript 语言功能](../../外部链接文档翻译/Typescript语言功能.md) 扩展在起作用。
 
 语言功能大致可以被分成两类：
 
@@ -51,7 +51,7 @@
 
 ## 编程语言功能
 
-编程语言功能包括 自动补全、错误检查，以及 跳转到定义。这些功能通常由一个 语言服务器 来提供支持，语言服务器 是一个会分析你的项目来提供动态功能的程序。其中一个例子是 **VS Code** 捆绑的 [TypeScript 语言功能](https://github.com/microsoft/vscode/tree/main/extensions/typescript-language-features) 扩展。它利用 [TypeScript 语言服务](https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API) 来提供编程语言功能，比如：
+编程语言功能包括 自动补全、错误检查，以及 跳转到定义。这些功能通常由一个 语言服务器 来提供支持，语言服务器 是一个会分析你的项目来提供动态功能的程序。其中一个例子是 **VS Code** 捆绑的 [TypeScript 语言功能](../../外部链接文档翻译/Typescript语言功能.md) 扩展。它利用 [TypeScript 语言服务](../../外部链接文档翻译/TypeScript语言服务.md) 来提供编程语言功能，比如：
 
 |功能英文名|翻译|
 |----|----|

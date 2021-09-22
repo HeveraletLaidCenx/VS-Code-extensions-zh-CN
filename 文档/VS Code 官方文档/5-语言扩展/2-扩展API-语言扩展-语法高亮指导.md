@@ -56,7 +56,7 @@ TextMate 标记化引擎 和 渲染器 在同一个进程中运行，并且会�
 
 ### TextMate 语法
 
-**VS Code** 使用 [TextMate 语法](https://macromates.com/manual/en/language_grammars) 作为 语法标记化 的引擎。 Textmate 语法 本身只为了 TextMate 编辑器而被创造的，而由于开源社区 创建 并 维护 的大量 语言包，它也被很多其他的 编辑器 和 IDE 所采用。
+**VS Code** 使用 [TextMate 语法](https://macromates.com/manual/en/language_grammars) 作为 语法标记化 的引擎。 Textmate 语法 本身只为了 TextMate 编辑器而被创造的，而由于开源社区 创建 并 维护 的大量 语言包，它也被很多其它的 编辑器 和 IDE 所采用。
 
 TextMate 语法 依赖 [Oniguruma 正则表达式](https://macromates.com/manual/en/regular_expressions) 并且通常以 属性列表 或者 JSON 文件的形式编写。
 
@@ -104,7 +104,7 @@ TextMate 语法 依赖 [Oniguruma 正则表达式](https://macromates.com/manual
 }
 ```
 
-语法文件 本身包含一个顶级规则。这通常被分成一个 列出程序的顶级元素的 `patterns` 部分，和一个定义了每个元素的 `repository` 部分。语法中的其他规则可以通过使用 `{ "include": "#id" }` 从 `repository` 中引用元素。
+语法文件 本身包含一个顶级规则。这通常被分成一个 列出程序的顶级元素的 `patterns` 部分，和一个定义了每个元素的 `repository` 部分。语法中的其它规则可以通过使用 `{ "include": "#id" }` 从 `repository` 中引用元素。
 
 例子中的 `abc` 语法，将字母 `a`、`b`、`c` 标记为了关键词，嵌套的括号标记成了表达式：
 
@@ -166,7 +166,7 @@ TextMate 语法 依赖 [Oniguruma 正则表达式](https://macromates.com/manual
 
 如果你的语法包含了嵌入到 上层语言中的 嵌入式语言，比如 HTML 中的 CSS 块，那你可以使用 `embeddedLanguages`（嵌入式语言） 作用点来告知 **VS Code** 将 嵌入式语言 和 上层语言 分开对待。
 
-这能确保 括号匹配、注释 以及其他基础的语言功能可以在 嵌入式语言 部分达到理想的效果。
+这能确保 括号匹配、注释 以及其它基础的语言功能可以在 嵌入式语言 部分达到理想的效果。
 
 `embeddedLanguages`（嵌入式语言） 作用点会将 嵌入式语言 中的 作用域 映射到 顶层语言 的 作用域。在下边这个例子里，所有在 `meta.embedded.block.javascript`（元数据.嵌入式.块.JavaScript） 作用域中的 标记都将被当成 JavaScript 内容对待：
 
@@ -223,7 +223,7 @@ yo code
 # ? File extensions:【这种语言文件的扩展名：】
 【如果语言文件有多种扩展名，用英文逗号来分隔，比如 '.ruby, .rb'】
     .abc
-# ? Scope names:【语言的根作用域名城：】
+# ? Scope names:【语言的根作用域名称：】
 【比如 'source.ruby'】
     source.abc
 # ? Initialize a git repository?【是否初始化为 Git 仓库？】

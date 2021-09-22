@@ -98,7 +98,7 @@
 
 第二步，向你注册的视图提供数据，让 **VS Code** 能在其中显示这些数据的内容。
 
-要做到这一点，你应该实现 [树的数据提供程序](https://code.visualstudio.com/api/references/vscode-api#TreeDataProvider) 。在这个例子中，它会提供 **Node** 依赖 的数据，但是之后你可以让 数据提供程序 提供其他类型的数据。
+要做到这一点，你应该实现 [树的数据提供程序](https://code.visualstudio.com/api/references/vscode-api#TreeDataProvider) 。在这个例子中，它会提供 **Node** 依赖 的数据，但是之后你可以让 数据提供程序 提供其它类型的数据。
 
 在这个 API 中，你需要实现两个必要的方法：
 
@@ -226,7 +226,7 @@ class Dependency extends vscode.TreeItem {
   );
   ```
 
-* `vscode.window.createTreeView`（vscode.窗口.创建树视图） —— 通过提供 已经注册的视图ID 和 上面的数据提供程序，来创建树视图。这种方法会提供到 [树视图](https://code.visualstudio.com/api/references/vscode-api#TreeView) 的访问权限，你可以用它来执行其他视图操作。如果你需要使用 树视图API 的话，请用这个 `createTreeView`（创建树视图） 的方法。
+* `vscode.window.createTreeView`（vscode.窗口.创建树视图） —— 通过提供 已经注册的视图ID 和 上面的数据提供程序，来创建树视图。这种方法会提供到 [树视图](https://code.visualstudio.com/api/references/vscode-api#TreeView) 的访问权限，你可以用它来执行其它视图操作。如果你需要使用 树视图API 的话，请用这个 `createTreeView`（创建树视图） 的方法。
 
   ```typescript
   vscode.window.createTreeView('nodeDependencies', {
@@ -398,8 +398,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 |字段名|翻译|字段含义|
 |----|----|----|
-|`view/title`|视图/标题|在视图的标题中显示 操作。主要操作 或者 内联操作 使用 `"group": "navigation"`（组别：导航） ，其他的是次要操作，会显示在 `...` 菜单中。|
-|`view/item/context`|视图/项目/上下文|在树项目中显示 操作。内联操作 使用 `"group": "inline"`（组别：内联） ，其他的是次要操作，会显示在 `...` 菜单中。|
+|`view/title`|视图/标题|在视图的标题中显示 操作。主要操作 或者 内联操作 使用 `"group": "navigation"`（组别：导航） ，其它的是次要操作，会显示在 `...` 菜单中。|
+|`view/item/context`|视图/项目/上下文|在树项目中显示 操作。内联操作 使用 `"group": "inline"`（组别：内联） ，其它的是次要操作，会显示在 `...` 菜单中。|
 
 你可以用 [when 条件判断语句](https://code.visualstudio.com/api/references/when-clause-contexts) 来控制这些 操作 的可见性。
 

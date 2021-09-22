@@ -40,7 +40,7 @@ vscode.languages.registerHoverProvider('javascript', {
 还有一种实现途径是通过实现一个遵循 [LSP（语言服务器协议）](https://microsoft.github.io/language-server-protocol/) 的 语言服务器。它的工作方式是：
 
 * 由扩展提供一个 语言客户端 和一个用于 JavaScript 的 语言服务器。
-* 语言客户端 和其他的 **VS Code** 扩展一样，运行在一个 Node.js 扩展宿主环境中。当它被激活的时候，会在另外一个进程中生成 语言服务器，并且和它通过 [LSP（语言服务器协议）](https://microsoft.github.io/language-server-protocol/) 进行通信。
+* 语言客户端 和其它的 **VS Code** 扩展一样，运行在一个 Node.js 扩展宿主环境中。当它被激活的时候，会在另外一个进程中生成 语言服务器，并且和它通过 [LSP（语言服务器协议）](https://microsoft.github.io/language-server-protocol/) 进行通信。
 * 当你在 **VS Code** 中将鼠标悬停于一段 JavaScript 代码上时
 * **VS Code** 通知 语言客户端 鼠标悬停事件
 * 语言客户端 从 语言服务器 查询悬停的结果，并将它发送回 **VS Code**

@@ -229,7 +229,7 @@ VS Code 带有一组可供所有 语义标记提供程序 使用的 标准语义
 
 前景色需要遵循在 [颜色格式](https://code.visualstudio.com/api/references/theme-color#color-formats) 中描述的颜色格式要求。不支持透明度。
 
-以下是一些 选择器 和 样式 的其他示例：
+以下是一些 选择器 和 样式 的其它示例：
 
 * `"*.declaration": { "bold": true } // all declarations are bold`
 * `"class:java": { "foreground": "#0f0", "italic": true } // classes in java`
@@ -254,20 +254,20 @@ VS Code 带有一组可供所有 语义标记提供程序 使用的 标准语义
 |`struct`|结构|`storage.type.struct`|存储.类型.结构|
 |`class`|类|`entity.name.type.class`|实体.名称.类型.类|
 |`class.defaultLibrary`|类.默认库|`support.class`|支持.类|
-|`interface`|界面|`entity.name.type.interface`|实体.名称.类型.界面|
+|`interface`|接口|`entity.name.type.interface`|实体.名称.类型.接口|
 |`enum`|枚举|`entity.name.type.enum`|实体.名称.类型.枚举|
 |`function`|函数|`entity.name.function`|实体.名称.函数|
 |`function.defaultLibrary`|函数.默认库|`support.function`|支持.函数|
 |`method`|方法|`entity.name.function.member`|实体.名称.函数.成员|
 |`macro`|宏|`entity.name.function.macro`|实体.名称.函数.宏|
-|`variable`|变量|`variable.other.readwrite` , `entity.name.variable`|变量.其他.读写、实体.名称.变量|
-|`variable.readonly`|变量.只读|`variable.other.constant`|变量.其他.静态|
+|`variable`|变量|`variable.other.readwrite` , `entity.name.variable`|变量.其它.读写、实体.名称.变量|
+|`variable.readonly`|变量.只读|`variable.other.constant`|变量.其它.静态|
 |`variable.readonly.defaultLibrary`|变量.只读.默认库|`support.constant`|支持.静态|
 |`parameter`|参数|`variable.parameter`|变量.参数|
-|`property`|属性|`variable.other.property`|变量.其他.属性|
-|`property.readonly`|属性.只读|`variable.other.constant.property`|变量.其他.静态.属性|
-|`enumMember`|枚举成员|`variable.other.enummember`|变量.其他.枚举成员|
-|`event`|事件|`variable.other.event`|变量.其他.事件|
+|`property`|属性|`variable.other.property`|变量.其它.属性|
+|`property.readonly`|属性.只读|`variable.other.constant.property`|变量.其它.静态.属性|
+|`enumMember`|枚举成员|`variable.other.enummember`|变量.其它.枚举成员|
+|`event`|事件|`variable.other.event`|变量.其它.事件|
 
 ### 自定义 TextMate 作用域映射
 

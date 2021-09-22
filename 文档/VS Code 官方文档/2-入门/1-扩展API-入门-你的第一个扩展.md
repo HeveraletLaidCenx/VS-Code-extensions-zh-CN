@@ -148,7 +148,7 @@ code ./helloworld
 
 下一篇文章中 [扩展剖析](https://code.visualstudio.com/api/get-started/extension-anatomy) 中，我们将细说 `Hello World` 例子的源代码，并解释关键概念。
 
-你可以在 [这里](https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-sample) 找到本教程的源代码。 [扩展指导](https://code.visualstudio.com/api/extension-guides/overview) 文章中包含其他例子，每个都展示了不同的 **扩展API** 或 **作用点** ，也遵循我们的 [扩展准则](https://code.visualstudio.com/api/references/extension-guidelines) 。
+你可以在 [这里](https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-sample) 找到本教程的源代码。 [扩展指导](https://code.visualstudio.com/api/extension-guides/overview) 文章中包含其它例子，每个都展示了不同的 **扩展API** 或 **作用点** ，也遵循我们的 [扩展准则](https://code.visualstudio.com/api/references/extension-guidelines) 。
 
 ### 使用 **JavaScript**
 
