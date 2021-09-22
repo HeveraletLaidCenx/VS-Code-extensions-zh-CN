@@ -1,4 +1,4 @@
-# 使用 语言服务API
+# 【注意：本篇文档未翻译完成】使用 语言服务API
 
 [原文链接，戳我前往](https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API)
 
